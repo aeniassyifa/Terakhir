@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\jnsKendaraanController;
+use App\Http\Controllers\jnsServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,4 @@ Route::post('/jnskendaraan/add', [jnsKendaraanController::class, 'store'])->name
 Route::get('/jnskendaraan/edit/{id_jns_kendaraan}', [jnsKendaraanController::class, 'edit'])->name('jnsKendaraan.edit');
 Route::post('/jnskendaraan/edit/{id_jns_kendaraan}', [jnsKendaraanController::class, 'update'])->name('jnsKendaraan.update');
 Route::get('/jnskendaraan/delete/{id_jns_kendaraan}', [jnsKendaraanController::class, 'destroy'])->name('jnsKendaraan.delete');
+Route::get('/jnsservice}', [jnsServiceController::class, 'destroy'])->name('jnsKendaraan.delete');
