@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class jnsService extends Model
+class JnsService extends Model
 {
     use HasFactory;
 
-    protected $table = 'jns_service';
-    protected $primaryKey = 'id_jns_service';
-    public $timestamps = false;
+    protected $table = 'jns_service'; // Sesuai dengan nama tabel di database
+    protected $primaryKey = 'id_jns_service'; // Menyesuaikan dengan Primary Key di tabel
+    public $timestamps = true; // Agar created_at & updated_at otomatis diisi
 
     protected $fillable = [
         'jns_service',

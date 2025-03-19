@@ -25,4 +25,11 @@ Route::post('/jnskendaraan/add', [jnsKendaraanController::class, 'store'])->name
 Route::get('/jnskendaraan/edit/{id_jns_kendaraan}', [jnsKendaraanController::class, 'edit'])->name('jnsKendaraan.edit');
 Route::post('/jnskendaraan/edit/{id_jns_kendaraan}', [jnsKendaraanController::class, 'update'])->name('jnsKendaraan.update');
 Route::get('/jnskendaraan/delete/{id_jns_kendaraan}', [jnsKendaraanController::class, 'destroy'])->name('jnsKendaraan.delete');
-Route::get('/jnsservice}', [jnsServiceController::class, 'destroy'])->name('jnsKendaraan.delete');
+
+// Routes untuk jnsService
+Route::get('/jnsservice', [jnsServiceController::class, 'index'])->name('jnsService.index');
+Route::get('/jnsservice/add', [jnsServiceController::class, 'create'])->name('jnsService.create');
+Route::post('/jnsservice/add', [jnsServiceController::class, 'store'])->name('jnsService.store');
+Route::get('/jnsservice/edit/{id_jns_service}', [jnsServiceController::class, 'edit'])->name('jnsService.edit');
+Route::post('/jnsservice/edit/{id_jns_service}', [jnsServiceController::class, 'update'])->name('jnsService.update');
+Route::get('/jnsservice/delete/{id_jns_service}', [jnsServiceController::class, 'destroy'])->name('jnsService.delete');
