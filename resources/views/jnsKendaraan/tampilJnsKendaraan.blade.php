@@ -38,14 +38,13 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="card mb-4">
-                    <div class="card-header">
-                         <h3 class="card-title">Data Keseluruhan Jenis Kendaraan</h3>
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h3 class="card-title">Data Keseluruhan Jenis Kendaraan</h3>
+                      <a href="{{route('jnsKendaraan.create')}}">
+                        <input type="button" class="btn btn-success" value="Tambah">
+                      </a>  
                     </div>
                     <div class="card-body p-0">
-                                <a href="{{route('jnsKendaraan.create')}}">
-                            <input type="button" value="Tambah">
-                        </a>
-
                         <table class="table table-striped">
                             <tr>
                                     <td>No</td>
