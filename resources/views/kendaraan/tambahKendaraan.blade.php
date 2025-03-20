@@ -1,13 +1,12 @@
 @include('layout.header')
-
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
-        <!--begin::Header-->
-        @include('layout.navbar')
-        
-        <!--end::Header-->
-        <!--begin::Sidebar-->
-        @include('layout.sidebar')
+      <!--begin::Header-->
+      @include('layout.navbar')
+      
+      <!--end::Header-->
+      <!--begin::Sidebar-->
+      @include('layout.sidebar')
         
         <!--end::Sidebar-->
         <!--begin::App Main-->
@@ -18,7 +17,7 @@
             <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-                <div class="col-sm-6"><h3 class="mb-0">Jenis Service</h3></div>
+                <div class="col-sm-6"><h3 class="mb-0">kendaraan</h3></div>
                 <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -43,14 +42,13 @@
                     <div class="card-header"><div class="card-title">Masukkan data bro!</div></div>
                     <!--end::Header-->
                     <!--begin::Form-->
-                    @foreach($data as $row)
-                    <form action="{{route('jnsService.update',$id)}}" method="post" name="update">
+                    <form action="{{route('kendaraan.store')}}" method="post" name="tambah">
                     <!--begin::Body-->
                     @csrf
                     <div class="card-body">
                         <div class="mb-3">
-                        <label class="form-label" for="">Nama Jenis Service</label>
-                        <input type="text" class="form-control" name="jns_service" value="{{$row->nm_jns_service}}" />
+                        <label class="form-label" for="">Nama kendaraan</label>
+                        <input type="text" class="form-control" name="kendaraan" />
                         </div>
                     </div>
                     <!--end::Body-->
@@ -60,7 +58,6 @@
                     </div>
                     <!--end::Footer-->
                     </form>
-                    @endforeach
                     <!--end::Form-->
                 </div>
             </div>
@@ -76,10 +73,14 @@
 </section>
 </main>
     <!--end::App Main-->
-    <!--begin::Footer-->
-    @include('layout.footer')
-
-
-    <!--end::Footer-->
+      <!--begin::Footer-->
+      @include('layout.coba')
+      
+<!-- apa -->
+      <!--end::Footer-->
     </div>
     @include('layout.footer')
+
+
+
+

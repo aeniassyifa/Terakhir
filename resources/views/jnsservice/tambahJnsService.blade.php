@@ -48,7 +48,7 @@
                     <div class="card-body">
                         <div class="mb-3">
                         <label class="form-label" for="">Nama Jenis Service</label>
-                        <input type="text" class="form-control" name="jns_services" />
+                        <input type="text" class="form-control" name="jns_service" />
                         </div>
                     </div>
                     <!--end::Body-->

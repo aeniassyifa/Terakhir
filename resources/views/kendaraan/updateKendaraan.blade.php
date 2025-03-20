@@ -18,7 +18,7 @@
             <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-                <div class="col-sm-6"><h3 class="mb-0">Jenis Service</h3></div>
+                <div class="col-sm-6"><h3 class="mb-0">Jenis kendaraan</h3></div>
                 <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-end">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -44,13 +44,13 @@
                     <!--end::Header-->
                     <!--begin::Form-->
                     @foreach($data as $row)
-                    <form action="{{route('jnsService.update',$id)}}" method="post" name="update">
+                    <form action="{{route('jnsKendaraan.update',$id)}}" method="post" name="update">
                     <!--begin::Body-->
                     @csrf
                     <div class="card-body">
                         <div class="mb-3">
-                        <label class="form-label" for="">Nama Jenis Service</label>
-                        <input type="text" class="form-control" name="jns_service" value="{{$row->nm_jns_service}}" />
+                        <label class="form-label" for="">Nama Jenis Kendaraan</label>
+                        <input type="text" class="form-control" name="jns_kendaraan" value="{{$row->nm_jns_kendaraan}}" />
                         </div>
                     </div>
                     <!--end::Body-->

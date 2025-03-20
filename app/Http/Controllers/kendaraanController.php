@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\JnsService;
 use Illuminate\Http\Request;
 
-class jnsServiceController extends Controller
+class kendaraanController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = JnsService::get();
-        // dd($data);
-        return view('jnsService.tampilJnsService', compact('data'));
+        //
     }
 
     /**
@@ -22,8 +19,7 @@ class jnsServiceController extends Controller
      */
     public function create()
     {
-        //untuk menampilkan form
-        return view('jnsService.tambahJnsService');
+        //
     }
 
     /**
@@ -31,11 +27,7 @@ class jnsServiceController extends Controller
      */
     public function store(Request $request)
     {
-        // insert ke sql
-        $data = new jnsService();
-        $data->nm_jns_service = $request->jns_service;
-        $post = $data->save();
-        return redirect('jnsService');
+        //
     }
 
     /**
@@ -52,8 +44,6 @@ class jnsServiceController extends Controller
     public function edit(string $id)
     {
         //
-        $data = JnsService::where('id_jns_service', '=', $id)->get();
-        return view('jnsService.updateJnsService', compact('data', 'id'));
     }
 
     /**
@@ -62,11 +52,6 @@ class jnsServiceController extends Controller
     public function update(Request $request, string $id)
     {
         //
-        $data=JnsService::where('id_jns_service', '=', $id);
-        $data->update([
-            'nm_jns_service' => $request->jns_service
-        ]);
-        return redirect('jnsservice');
     }
 
     /**
@@ -75,8 +60,5 @@ class jnsServiceController extends Controller
     public function destroy(string $id)
     {
         //
-        $data=JnsService::where('id_jns_service', '=', $id);
-        $data->delete();
-        return redirect('jnsservice');
     }
 }
