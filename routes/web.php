@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('tamplate');
 });
 
+// Routes untuk jnskendaraan
 Route::get('/jnskendaraan', [jnsKendaraanController::class, 'index'])->name('jnsKendaraan.index');
 Route::get('/jnskendaraan/add', [jnsKendaraanController::class, 'create'])->name('jnsKendaraan.create');
 Route::post('/jnskendaraan/add', [jnsKendaraanController::class, 'store'])->name('jnsKendaraan.store');

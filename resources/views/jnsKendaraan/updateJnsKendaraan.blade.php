@@ -1,12 +1,13 @@
 @include('layout.header')
+
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
-      <!--begin::Header-->
-      @include('layout.navbar')
-      
-      <!--end::Header-->
-      <!--begin::Sidebar-->
-      @include('layout.sidebar')
+        <!--begin::Header-->
+        @include('layout.navbar')
+        
+        <!--end::Header-->
+        <!--begin::Sidebar-->
+        @include('layout.sidebar')
         
         <!--end::Sidebar-->
         <!--begin::App Main-->
@@ -29,8 +30,8 @@
             </div>
             <!--end::Container-->
         </div>
-        @foreach($data as $row)
-        <form action="{{route('jnsKendaraan.update',$id)}}" method="post" name="update">
+        </form>
+
         <div class="app-content">
             <!--begin::Container-->
             <div class="container-fluid">
@@ -42,13 +43,14 @@
                     <div class="card-header"><div class="card-title">Masukkan data bro!</div></div>
                     <!--end::Header-->
                     <!--begin::Form-->
-                    <form action="{{route('jnsKendaraan.store')}}" method="post" name="tambah">
+                    @foreach($data as $row)
+                    <form action="{{route('jnsKendaraan.update',$id)}}" method="post" name="update">
                     <!--begin::Body-->
                     @csrf
                     <div class="card-body">
                         <div class="mb-3">
                         <label class="form-label" for="">Nama Jenis Kendaraan</label>
-                        <input type="text" class="form-control" name="jns_kendaraans" value="{{$row->nm_jns_kendaraan}}" />
+                        <input type="text" class="form-control" name="jns_kendaraan" value="{{$row->nm_jns_kendaraan}}" />
                         </div>
                     </div>
                     <!--end::Body-->
@@ -74,36 +76,10 @@
 </section>
 </main>
     <!--end::App Main-->
-      <!--begin::Footer-->
-      @include('layout.coba')
-      
-<!-- apa -->
-      <!--end::Footer-->
-    </div>
+    <!--begin::Footer-->
     @include('layout.footer')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@foreach($data as $row)
-<form action="{{route('jnsKendaraan.update',$id)}}" method="post" name="update">
-    @csrf
-    <label for="">Nama Jenis Kendaraan : </label>
-    <input type="text" name="jns_kendaraans" id="">
-    <input type="submit" name="update" value="update">
-</form>
-@endforeach
+    <!--end::Footer-->
+    </div>
+    @include('layout.footer')

@@ -53,7 +53,6 @@
                             </tr>
                             @php $no = 1; @endphp
                             @foreach($data as $row)
-
                             <tr>
                                 <td>{{$no++}}</td>
                                 <td>{{$row->nm_jns_kendaraan}}</td>

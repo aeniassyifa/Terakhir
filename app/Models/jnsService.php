@@ -9,16 +9,14 @@ class JnsService extends Model
 {
     use HasFactory;
 
-    protected $table = 'jns_service'; // Sesuai dengan nama tabel di database
-    protected $primaryKey = 'id_jns_service'; // Menyesuaikan dengan Primary Key di tabel
-    public $timestamps = true; // Agar created_at & updated_at otomatis diisi
+    protected $table = 'jns_service'; 
 
     protected $fillable = [
         'jns_service',
-        'keterangan',
+        'nm_jns_kendaraan',
     ];
 
-    public function services()
+    public function service()
     {
         return $this->hasMany(Service::class, 'id_jns_service');
     }
